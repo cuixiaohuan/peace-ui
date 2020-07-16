@@ -1,4 +1,4 @@
-# color-ui
+# colorful-ui
 
 ## Project setup
 ```
