@@ -1,0 +1,148 @@
+// @import './_common';
+
+$cCellBg:#FFFFFF;
+$cCellBorderColor:#e5e5e5;
+$cCellGapV:10px;
+$cCellGapH:15px;
+$cCellInnerGapH:.35em;
+$cCellHeight: 45px;
+$cCellFontSize:17px;
+$cCellTipsFontSize:14px;
+$cCellLabelWidth:105px;
+
+// $cCellLineHeight: ($cCellHeight - 2 * $cCellGapV) / $cCellFontSize;// 高度减去上下padding的行高
+// $cCellsMarginTop: 20 / $cCellFontSize + em;
+
+// c switch
+$cSwitchHeight: 32px;
+
+// c uploader
+$cUploaderBorderColor:#D9D9D9;
+$cUploaderActiveBorderColor:#999999;
+$cUploaderFileSpacing: 9px;
+$cUploaderSize: 79px;
+$cUploaderBorderWidth: 1px;
+
+// cells_global
+.c-cells {
+    margin-top: 20px / $cCellFontSize + em;
+    background-color: $cCellBg;
+    // color: $cTextColorTips;
+    line-height: ($cCellHeight - 2 * $cCellGapV) / $cCellFontSize;
+    font-size: $cCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+
+    // onepx
+    position: relative;
+    // &:before {
+    //     @include setTopLine($cCellBorderColor);
+    //     z-index: 2;
+    // }
+    // &:after {
+    //     @include setBottomLine($cCellBorderColor);
+    //     z-index: 2;
+    // }
+}
+
+.c-cells__title {
+    padding-top: .77em; // 15px - 行高
+    padding-bottom: .3em; // 8px - 行高
+    padding-left: $cCellGapH;
+    padding-right: $cCellGapH;
+    color: $cTextColorGray;
+    font-size: $cCellTipsFontSize;
+    background-color: $cCellBg;
+
+    & + .c-cells {
+        margin-top: 0;
+    }
+}
+
+.c-cells__tips {
+    margin-top: .3em; // 8px - 行高
+    color: $cTextColorGray;
+    padding-left: $cCellGapH;
+    padding-right: $cCellGapH;
+    font-size: $cCellTipsFontSize;
+}
+.c-cell_flex {
+    display: -webkit-flex;
+    display: flex;
+}
+.c-cell {
+    padding: $cCellGapV $cCellGapH;
+    position: relative; // 这个是为了兼容cells容器onepx方案被before挡住而做的
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    background-color: $cCellBg;
+    
+    &:before {
+        @include setTopLine($cCellBorderColor);
+        // left: $cCellGapH;
+        z-index: 2;
+    }
+    &:last-child {
+        &:after {
+            @include setBottomLine($cCellBorderColor)
+        }
+    }
+}
+.c-cell_primary{
+    align-items: flex-start;
+}
+.c-cell__bd{
+    flex: 1;
+}
+.c-cell__ft {
+    text-align: right;
+    color: $cTextColorGray;
+}
+
+
+.c-cell_access {
+    @include setTapColor;
+    color: inherit;
+    &:active {
+        background-color: #ECECEC;
+    }
+    .c-cell__ft {
+        padding-right: 13px;
+        position: relative;
+        &:after {
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            right: 2px;
+        }
+    }
+}
+.c-cell_link{
+    // color: $cLinkColorDefault;
+    font-size: 14px;
+
+    // 由于c-cell:first-child的:before为隐藏，所以这里要重新显示出来
+    &:first-child{
+        &:before{
+            display: block;
+        }
+    }
+}
+
+
+// check-common
+.c-check__label {
+    @include setTapColor;
+    &:active {
+        background-color: #ECECEC;
+    }
+}
+
+.c-check{
+    position: absolute;
+    left: -9999em;
+}
+

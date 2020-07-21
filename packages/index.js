@@ -1,7 +1,9 @@
-import HelloWorld from './helloworld';
+import HelloWorld from './components/helloworld';
+import CActionsheet from './components/actionsheet'
 
 const components = [
   HelloWorld,
+  CActionsheet,
 ];
 
 const install = (Vue) => {
@@ -17,4 +19,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   HelloWorld,
+  CActionsheet,
 };

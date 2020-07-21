@@ -1,0 +1,150 @@
+@import "../../../common/_common.scss";
+// @import '/common/_mixin.scss';
+// @import '/common/_global.scss';
+// @import '/common/_icon.scss';
+// @import '/common/_cell.scss';
+// @import '/common/_mask.scss';
+// @import '/common/_tab.scss';
+
+$cActionSheetAndroidBorderRadius: 2px;
+
+.c-actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  backface-visibility: hidden;
+  z-index: 5000;
+  width: 100%;
+  background-color: $cBgColorDefault;
+  //slide up animation
+  transition: transform 0.3s;
+}
+.c-actionsheet__title {
+  position: relative;
+  // height: 65px;
+  height: auto;
+  padding: 15px 20px;
+  line-height: 1.4;
+
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  background: #fcfcfd;
+
+  border-radius: 10px;
+
+  &:before {
+    @include setBottomLine($cCellBorderColor);
+  }
+  .c-actionsheet__title-text {
+    @include ellipsisLn(2);
+    font-size: 14px;
+  }
+}
+.c-actionsheet__menu {
+  background-color: #fcfcfd;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+// 底部按钮
+.c-actionsheet__action {
+  margin-top: 6px;
+  background-color: #fcfcfd;
+
+  border-radius: 10px;
+}
+.c-actionsheet__cell {
+  display: block;
+  color: $cTextColorTitle;
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  &:before {
+    @include setTopLine($cCellBorderColor);
+  }
+  &:active {
+    background-color: $cBgColorActive;
+  }
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+//android actionSheet
+.c-skin_android {
+  .c-actionsheet {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    //padding: 0 40px;
+    width: 274px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background: transparent;
+    //slide up animation
+    // transition: transform .3s;
+
+    animation: toggle 0.12s ease-in-out;
+  }
+  .c-actionsheet__action {
+    display: none;
+  }
+  // .c-actionsheet__title  {
+  // display: none;
+  // }
+  .c-actionsheet__menu {
+    border-radius: $cActionSheetAndroidBorderRadius;
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  }
+  .c-actionsheet__cell {
+    padding: 13px 24px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    &:first-child {
+      border-top-left-radius: $cActionSheetAndroidBorderRadius;
+      border-top-right-radius: $cActionSheetAndroidBorderRadius;
+    }
+    &:last-child {
+      border-bottom-left-radius: $cActionSheetAndroidBorderRadius;
+      border-bottom-right-radius: $cActionSheetAndroidBorderRadius;
+    }
+  }
+}
+@-webkit-keyframes toggle {
+  0% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes toggle {
+  0% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+//actionSheet aniamtion
+.c-actionsheet_toggle {
+  transform: translate(0, 0);
+  box-sizing: border-box;
+  padding: 4px;
+  background-color: transparent;
+}

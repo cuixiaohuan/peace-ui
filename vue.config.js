@@ -14,6 +14,15 @@ module.exports = {
       .add('/packages')
       .end()
       .use('babel')
-      .loader('babel-loader');
+      .loader('babel-loader')
+
+
+    config.module
+      .rule('sass')
+      .include
+      .add('/common')
+      .end()
+      .use('sass')
+      .loader('sass-loader')
   },
 };
