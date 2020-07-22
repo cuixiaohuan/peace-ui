@@ -11,7 +11,7 @@ $cCellTipsFontSize:14px;
 $cCellLabelWidth:105px;
 
 // $cCellLineHeight: ($cCellHeight - 2 * $cCellGapV) / $cCellFontSize;// 高度减去上下padding的行高
-// $cCellsMarginTop: 20 / $cCellFontSize + em;
+$cCellsMarginTop: 20 / $cCellFontSize + em;
 
 // c switch
 $cSwitchHeight: 32px;

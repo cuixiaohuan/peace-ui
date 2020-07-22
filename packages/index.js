@@ -1,9 +1,13 @@
 import HelloWorld from './components/helloworld';
 import CActionsheet from './components/actionsheet'
+import CButton from './components/button'
+import CList from './components/list'
 
 const components = [
   HelloWorld,
   CActionsheet,
+  CButton,
+  CList,
 ];
 
 const install = (Vue) => {
@@ -20,4 +24,6 @@ export default {
   install,
   HelloWorld,
   CActionsheet,
+  CButton,
+  CList,
 };

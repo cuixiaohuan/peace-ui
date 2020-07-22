@@ -8,6 +8,14 @@ const router = new Router({
       path: '/',
       component: (resolve) => require(['../pages/index.vue'], resolve),
     },
+    {
+      path: '/action',
+      component: (resolve) => require(['../pages/actionsheet.vue'], resolve),
+    },
+    {
+      path: '/button',
+      component: (resolve) => require(['../pages/button.vue'], resolve),
+    },
   ],
 });
 export default router;
