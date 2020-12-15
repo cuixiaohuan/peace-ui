@@ -1,10 +1,8 @@
-import HelloWorld from './components/helloworld';
 import CActionsheet from './components/actionsheet'
 import CButton from './components/button'
 import CList from './components/list'
 
 const components = [
-  HelloWorld,
   CActionsheet,
   CButton,
   CList,
@@ -22,7 +20,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  HelloWorld,
   CActionsheet,
   CButton,
   CList,

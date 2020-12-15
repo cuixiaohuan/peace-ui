@@ -108,7 +108,8 @@ $cUploaderBorderWidth: 1px;
         background-color: #ECECEC;
     }
     .c-cell__ft {
-        padding-right: 13px;
+        padding-right: 1.3em;
+        // padding-right: 13px;
         position: relative;
         &:after {
             content: " ";

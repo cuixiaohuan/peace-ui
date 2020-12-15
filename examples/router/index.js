@@ -16,6 +16,14 @@ const router = new Router({
       path: '/button',
       component: (resolve) => require(['../pages/button.vue'], resolve),
     },
+    {
+      path: '/datepicker',
+      component: (resolve) => require(['../pages/datepicker.vue'], resolve),
+    },
+    {
+      path: '/list',
+      component: (resolve) => require(['../pages/list.vue'], resolve),
+    },
   ],
 });
 export default router;

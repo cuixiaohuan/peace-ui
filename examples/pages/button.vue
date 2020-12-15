@@ -12,6 +12,7 @@
       div(style='margin: 10px;')
         c-button(type="plain-primary inline")| 原始按钮
         c-button(type="plain-danger inline")| 危险按钮
+      div(style='margin: 10px;')
         c-button(type="plain-warn inline")| 警告按钮
         c-button(type="plain-default inline")| 默认按钮
 

@@ -2,10 +2,11 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
+
 // 导入组件库
-import color from '../packages';
+import peace from '../packages';
 // 注册组件库
-Vue.use(color);
+Vue.use(peace);
 
 Vue.config.productionTip = false;
 

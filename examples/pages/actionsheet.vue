@@ -56,8 +56,8 @@
                 //-             p.title 微信分享
 
 
-        //- c-actionsheet(v-model='showAndroid', style-sheet='android', :menu-list='list', title='标题(描述bjandjajdasfa)')
-        c-actionsheet(v-model='showAndroid', @click="clickBtn", style-sheet='2', :menu-list='list', title="style-sheet='1'")
+        c-actionsheet(v-model='showAndroid', style-sheet='android', :menu-list='list', title='标题(描述bjandjajdasfa)')
+        //- c-actionsheet(v-model='showAndroid', @click="clickBtn", style-sheet='2', :menu-list='list', title="style-sheet='1'")
 </template>
 <script>
 export default {
