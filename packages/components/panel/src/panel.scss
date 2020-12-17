@@ -1,0 +1,111 @@
+@import "../../../common/_common.scss";
+.c-panel {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    position: relative;
+    overflow: hidden;
+    &:before {
+        @include setTopLine($cLineColorLight);
+    }
+    &:after {
+        @include setBottomLine($cLineColorLight);
+    }
+}
+
+.c-panel__hd {
+    padding: 14px 15px 10px;
+    color: $cTextColorGray;
+    font-size: 13px;
+    position: relative;
+    &:after {
+        @include setBottomLine($cLineColorLight);
+        // left: 15px;
+    }
+
+    > a {
+        color: $cTextColorGray;
+        margin: -14px -15px -10px;
+        padding: 14px 15px 10px;
+
+        & {
+            // :after {
+            //     content: " ";
+            //     @include setArrow(right, 6px, #C8C8CD, 2px);
+            //     position: absolute;
+            //     top: 50%;
+            //     margin-top: -4px;
+            //     right: 18px;
+            // }
+
+            .c-cell{
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+.c-panel__bd {
+    // padding: 14px 15px 10px;
+    // padding: 14px 15px 0;
+    padding: 0 15px;
+    font-size: $cCellTipsFontSize;
+    position: relative;
+    // margin-bottom: 28px;
+    >.c-form {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    >.c-cell {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .c-checkbox-group {
+        margin: 0 -15px;
+    }
+
+    .c-radio-group {
+        margin: 0 -15px;
+    }
+
+    // >.c-cell:first-child {
+    //     margin-top: -14px;
+    // }
+
+    // >.c-cell:last-child {
+    //     margin-bottom: -10px;
+    // }
+
+    // >:first-child {
+    //     &::before {
+    //         // display: none;
+    //     }
+    // }
+
+}
+
+.c-panel__ft {
+    .c-cell_link {
+        color: $cLinkColorDefault;
+        
+    }
+
+    .c-cell {
+        &:first-child{
+            &:before{
+                display: none;
+            }
+        }
+    }
+}

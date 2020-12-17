@@ -1,11 +1,16 @@
 import CActionsheet from './components/actionsheet'
 import CButton from './components/button'
 import CList from './components/list'
+import CSlider from './components/slider'
+import CPanel from './components/panel'
 
 const components = [
   CActionsheet,
   CButton,
   CList,
+  CSlider,
+  CPanel,
+
 ];
 
 const install = (Vue) => {
@@ -23,4 +28,6 @@ export default {
   CActionsheet,
   CButton,
   CList,
+  CSlider,
+  CPanel,
 };

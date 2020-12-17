@@ -24,6 +24,14 @@ const router = new Router({
       path: '/list',
       component: (resolve) => require(['../pages/list.vue'], resolve),
     },
+    {
+      path: '/slider',
+      component: (resolve) => require(['../pages/slider.vue'], resolve),
+    },
+    {
+      path: '/panel',
+      component: (resolve) => require(['../pages/panel.vue'], resolve),
+    },
   ],
 });
 export default router;
