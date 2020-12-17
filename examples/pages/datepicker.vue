@@ -1,8 +1,8 @@
 <template lang="pug">
     div
-        c-datepicker(@confirm="confirm1", start="2015-04-06 09:00", end="2019-10-15 15:30", type="datetime", form-date="-", v-model="show1", :default-value="res.r1")
-        c-datepicker(@confirm="confirm2", start="08:30", end="18:00", type="time", v-model="show2", :default-value="res.r2")
-        c-datepicker(@confirm="confirm3", start="2015-03-19", end="2019-12-19", type="date", form-date="/", v-model="show3", :default-value="res.r3", :mask-closeable="false")
+        p-datepicker(@confirm="confirm1", start="2015-04-06 09:00", end="2019-10-15 15:30", type="datetime", form-date="-", v-model="show1", :default-value="res.r1")
+        p-datepicker(@confirm="confirm2", start="08:30", end="18:00", type="time", v-model="show2", :default-value="res.r2")
+        p-datepicker(@confirm="confirm3", start="2015-03-19", end="2019-12-19", type="date", form-date="/", v-model="show3", :default-value="res.r3", :mask-closeable="false")
     </div>
 </template>
 <script>

@@ -15,7 +15,7 @@ const components = [
 
 const install = (Vue) => {
   if (install.installed) return;
-  components.map((component) => Vue.component(component.name, component));
+  components.map((component) => Vue.component(component.name.replace("C", "P"), component));
 };
 
 // 判断是否是直接引入文件

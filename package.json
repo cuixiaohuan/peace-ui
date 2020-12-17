@@ -1,19 +1,18 @@
 {
   "name": "peace-ui",
-  "version": "0.2.0",
+  "version": "0.2.2",
 
   "repository": {
     "type": "git",
     "url": "https://github.com/cuixiaohuan/peace-ui.git"
   },
+  "homepage": "https://cuixiaohuan.github.io/peace-ui-helper/",
 
   "keywords": [
     "web", "vue", "components"
   ],
   "author": "cuixiaohuan 479083227@qq.com",
   "description": "peace-ui ———— 一个基于vue的UI组件框架。",
-  "homepage": "",
-
 
   "private": false,
   "scripts": {

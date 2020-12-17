@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    c-list(
+    p-list(
         v-for="item in list",
         :legend="item.legend",
         :title="item.title",

@@ -1,26 +1,26 @@
 <template lang="pug">
 div
-	c-panel(title="panel标题", height="300px")
-		//- c-list(:title="'new item'+item", legend='pullingDown')
-		//- c-list(:title="'new item'+item", legend='pullingUp')
-		//- c-list(title='文字标题', legend='说明文字3', href='javascript:;')
+	p-panel(title="panel标题", height="300px")
+		//- p-list(:title="'new item'+item", legend='pullingDown')
+		//- p-list(:title="'new item'+item", legend='pullingUp')
+		//- p-list(title='文字标题', legend='说明文字3', href='javascript:;')
 
-	c-panel(
+	p-panel(
 		title="panel标题",
 		link="/candy/tests/index.html",
 		height="auto",
 		legend="back menu",
 		icon="ion-person"
 	)
-		c-list(title="文字标题", legend="说明文字3", icon="ion-ios-alarm-outline")
-		c-list(
+		p-list(title="文字标题", legend="说明文字3", icon="ion-ios-alarm-outline")
+		p-list(
 			title="文字标题",
 			legend="说明文字3",
 			icon="ion-ios-cog-outline",
 			href="javascript:;"
 		)
 		template(slot="footer")
-			c-list(title="查看更多", href="javascript:;")
+			p-list(title="查看更多", href="javascript:;")
 
 
 </template>
